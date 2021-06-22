@@ -1,0 +1,12 @@
+flask~=2.0.1
+flask-login
+flask-mail
+wtforms~=2.3.3
+flask-wtf
+flask-sqlalchemy
+flask-bcrypt
+email-validator
+flask-MySQLdb
+flask-mail
+Jinja==1.2
+itsdangerous~=2.0.1
