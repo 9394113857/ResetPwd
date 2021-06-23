@@ -1,0 +1,41 @@
+"F:\Forgot Password\ResetPwd\venv\Scripts\python.exe" "F:/Forgot Password/ResetPwd/run.py"
+F:\Forgot Password\ResetPwd\venv\lib\site-packages\flask_sqlalchemy\__init__.py:873: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Serving Flask app 'flaskblog' (lazy loading)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+[2021-06-23 13:03:04,447] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "F:\Forgot Password\ResetPwd\flaskblog\routes.py", line 28, in home
+    return render_template('home.html', posts=posts)
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    ctx.app,
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "F:\Forgot Password\ResetPwd\flaskblog\templates\home.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "F:\Forgot Password\ResetPwd\flaskblog\templates\layout.html", line 61, in top-level template code
+    {% block content %}{% endblock %}
+  File "F:\Forgot Password\ResetPwd\flaskblog\templates\home.html", line 18, in block 'content'
+    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+  File "F:\Forgot Password\ResetPwd\venv\lib\site-packages\jinja2\utils.py", line 84, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'iter_pages'
+127.0.0.1 - - [23/Jun/2021 13:03:04] "GET / HTTP/1.1" 500 -
+
+Process finished with exit code -1
